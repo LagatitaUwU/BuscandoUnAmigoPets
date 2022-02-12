@@ -1,16 +1,73 @@
-<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Busca un amigo</h1>
+        <p class="lead text-muted">
+          Adoptar a un mascota es una manera de combatir el maltrato animal, ayudas a que disminuyan las cifras de abandono de las mascotas, liberas un espacio en el refugio para que otros perros puedan recibir ayuda y le ofreces mejores condiciones de vida.
+        </p>
+      </div>
     </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">An item</li>
-      <li class="list-group-item">A second item</li>
-      <li class="list-group-item">A third item</li>
-    </ul>
-    <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col" *ngFor="let item of amigo">
+          <div class="card shadow-sm">
+            <img width="100%" height="225" src={{item.foto}}>
+            
+            <div class="card-body">
+              <p class="card-text">{{item.nombre}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" (click)="seleciona(item.id)" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver</button>
+                  <!--<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                </div>
+                <small class="text-muted">telefono: {{item.numero}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
+</main>
+
+<button type="button" (click)="seleciona(1)" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Mascota: {{nombre}}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img width="100%" height="225" src={{foto}}>
+      </div>
+      <div class="modal-footer">
+        <p>Numero Telefonico: {{numero}}      </p>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <!--<button type="button" class="btn btn-primary"></button>-->
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="text-muted py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
+  </div>
+</footer>
+
