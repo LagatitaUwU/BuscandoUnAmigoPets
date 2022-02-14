@@ -8,6 +8,7 @@ import { ComoAdoptarComponent } from './como-adoptar/como-adoptar.component';
 import { ComoDarAdopcionComponent } from './como-dar-adopcion/como-dar-adopcion.component';
 import { AcercaComponent } from './acerca/acerca.component';
 import { CatalagoAmigosComponent } from './catalago-amigos/catalago-amigos.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CatalagoAmigosComponent } from './catalago-amigos/catalago-amigos.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

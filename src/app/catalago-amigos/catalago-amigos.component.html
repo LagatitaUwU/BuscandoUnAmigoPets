@@ -51,17 +51,20 @@
           </select>
         </div>
         <div class="col-sm">
-          <input type="text" class="form-control" placeholder="State" aria-label="State">
+          Tamaño
+          <select class="form-select" id="autoSizingSelect" >
+            <option  (click)="selecionaTamanio(item)" *ngFor="let item of tamanios">
+              {{item}}
+            </option>
+          </select>
         </div>
         <div class="col-sm">
           Edad minima
-          <input type="number" value=0 min="0" max="20" class="form-control" placeholder="0">
+          <input [(ngModel)]=filtro.edadMin type="number" value=0 min="0" max="20" class="form-control" placeholder="0">
           Edad maxima
-          <input type="number" value=20 min="0" max="20" class="form-control" placeholder="20">
-        </div>
-        
-        <div class="col-sm">
-          <input type="text" class="form-control" placeholder="Zip" aria-label="Zip">
+          <input [(ngModel)]=filtro.edadMax type="number" value=20 min="0" max="20" class="form-control" placeholder="20">
+          <br>
+          <button type="button" class="btn btn-primary btn-sm" (click)="buscaFiltro()">Buscar por edad</button>
         </div>
       </div>
       <br>

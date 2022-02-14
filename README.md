@@ -1,7 +1,7 @@
 # Buscando un amigo
 **Autor:** Gabriela Abril Cardenas Calizaya
 **Ultimo cambio: **
-Se agrega Ruteo de los componentes home, acerca como adoptar, como dar en adopción y se agrega una nueva barra de navegacion.
+Se agregan filtros el catalagos amigos 
 **Fecha: 10/02/2022**
 This project was generated with Angular CLI version 12.2.12.
 Development server
