@@ -108,7 +108,17 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <img width="100%" height="225" src={{amigo.foto}}>
+        <div class = "caracteristicas">
+          <p>Caracteristicas:</p>
+          <div class = "caracteristicasSub">
+            <b>Color: </b>{{amigo.color}}, <b>Sexo: </b>{{amigo.sexo}}, <b>Tamaño: </b>{{amigo.tamanio}} <b>Edad: </b><label *ngIf="amigo.edad==1">{{amigo.edad}} año</label><label *ngIf="amigo.edad>1">{{amigo.edad}} años</label>
+          </div>
+          <p>Historia:</p>
+          <div class = "caracteristicasSub">
+            {{amigo.historia}}
+          </div>
+        </div> 
+        <img width="100%" height="225" src={{amigo.foto}}>        
       </div>
       <div class="modal-footer">
         <p>Numero Telefonico: {{amigo.numero}}         </p>

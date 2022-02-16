@@ -2,3 +2,19 @@
     padding: 1em;
     background: rgba(162, 163, 165, 0.732);
 }
+
+.caracteristicas{
+    font-size: 145%;
+    border-radius: 5px;
+    background: rgba(218, 214, 214, 0.541); 
+    padding: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.caracteristicasSub{
+    font-size: 55%;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.15); 
+    padding: 5px;
+    color: rgb(0, 0, 0);
+}
